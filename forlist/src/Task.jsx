@@ -25,7 +25,7 @@ class Task extends Component {
 	}
 	
 	handleKeyDown(e) {  
-		if (e.key === 'Enter' && e.shiftKey) { 
+		if (e.key === 'Enter') { 
 			this.props.addEmptyTask(this);  
 
 			this.props.handleFocus(this.props.id+1);
@@ -47,7 +47,7 @@ class Task extends Component {
 	render() {
 		return (
 			<div className="task"> 
-				<textarea autoFocus  ref="input" type="textarea" value={this.state.Text} onChange={this.handleChange} onKeyDown={this.handleKeyDown} />
+				<input autoFocus  ref="input"   value={this.state.Text} onChange={this.handleChange} onKeyDown={this.handleKeyDown} />
 			</div>
 		);
 	}

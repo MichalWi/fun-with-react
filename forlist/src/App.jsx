@@ -11,7 +11,7 @@ class App extends Component {
 			<div className="App">
 				<div className="App-header">
 					<img src={logo} className="App-logo" alt="logo" />
-					<h2>Advanced lel system</h2>
+					<h2>Advanced PRODUCTIVITY platform</h2>
 				</div>
 				<div className="tasks">
 					<h1>Task List</h1>

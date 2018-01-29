@@ -1,11 +1,11 @@
 import React, { Component } from "react"; 
-import debounce from 'lodash.debounce';
-import "./App.css";
+import debounce from 'lodash.debounce'; 
+import "./Task.css";
 
 class Task extends Component {
 	constructor(props){
 		super(props);
-		this.state = { Text: props.task.Text };
+		this.state = { Text: props.task.Text, Pomodoros: props.task.Pomodoros };
 		this.handleChange = this.handleChange.bind(this); 
 		this.handleKeyDown = this.handleKeyDown.bind(this);  
 		this.emitChangeDebounced = debounce(this.emitChange, 250);
@@ -27,21 +27,25 @@ class Task extends Component {
 	handleKeyDown(e) {  
 		if (e.key === 'Enter') { 
 			this.props.addEmptyTask(this);  
-
 			this.props.handleFocus(this.props.id+1);
-		} else
-
-		if(e.key ==="Backspace" && this.state.Text === ""){
+		} 
+		else if(e.key ==="Backspace" && this.state.Text === ""){
 			this.props.handleFocus(this.props.id-1); 
 			this.props.deleteTask(this);  
+			e.preventDefault();
+			return false;
 		}  
-		if(e.key === "ArrowDown"){
+		else if(e.key === "ArrowDown"){
 			this.props.handleFocus(this.props.id+1);
+			e.preventDefault();
+			return false;
 		}
-		if(e.key === "ArrowUp")
+		else if(e.key === "ArrowUp")
 		{
-			this.props.handleFocus(this.props.id-1);       
-		} 
+			this.props.handleFocus(this.props.id-1);      
+			e.preventDefault();
+			return false; 
+		}  
 	} 
  
 	render() {

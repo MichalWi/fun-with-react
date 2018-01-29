@@ -1,5 +1,4 @@
-import React, { Component } from "react";
-import logo from "./logo.svg";
+import React, { Component } from "react"; 
 import TaskList from "./TaskList";
 import "./App.css";
 
@@ -10,11 +9,9 @@ class App extends Component {
 		return (
 			<div className="App">
 				<div className="App-header">
-					<img src={logo} className="App-logo" alt="logo" />
-					<h2>Advanced PRODUCTIVITY platform</h2>
+					<div className="App-logo"><span  role="img"   aria-label="boar" >🐗</span></div>
 				</div>
-				<div className="tasks">
-					<h1>Task List</h1>
+				<div className="tasks"> 
 					<TaskList/>
 				</div>
 			</div>

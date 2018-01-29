@@ -1,7 +1,7 @@
 import React, { Component } from "react"; 
 import Task from "./Task";
 
-import "./App.css";
+import "./TaskList.css";
 
 const TaskHistoryKey = "QuiteUniqueKeyForChachingThoseTasksSir";
 
@@ -53,12 +53,7 @@ class TaskList extends Component {
 		this.saveState();
 	}
 
-	saveState(){
-  
-		if(window.localStorage){
-			localStorage.setItem(TaskHistoryKey, JSON.stringify(this.state));
-		}
-	}
+	
 
 	deleteTask(taskToDelete) { 
 
@@ -68,17 +63,24 @@ class TaskList extends Component {
 			})
 		}));  
  
-
+		this.saveState();
+	}
+	saveState(){
 		if(window.localStorage){
 			localStorage.setItem(TaskHistoryKey, JSON.stringify(this.state));
 		}
 	}
-
 	handleFocus(id) {
 		var child = this.refs['task' + id];
 		if (!child) return;
 		var input = child.refs.input;
+	 
+
+		var temp_value = input.value;
+		input.value = '';
+		input.value = temp_value; 
 		input.focus();
+		
 	}
 	
 	render() {

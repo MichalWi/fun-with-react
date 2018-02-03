@@ -25,7 +25,7 @@ class Task extends Component {
 	}
 	
 	handleKeyDown(e) {  
-		if (e.key === 'Enter') { 
+		if (e.key === 'Enter' && this.state.Text) { 
 			this.props.addEmptyTask(this);  
 			this.props.handleFocus(this.props.id+1);
 		} 

@@ -3,10 +3,6 @@
      margin: 0 auto;
  }
  
- .tasks .button {
-     float: right;
- }
- 
  @media (max-width: 667px) {
      .tasks {
          width: 95%;

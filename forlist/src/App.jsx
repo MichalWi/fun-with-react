@@ -9,7 +9,7 @@ class App extends Component {
 		return (
 			<div className="App">
 				<div className="App-header">
-					<div className="App-logo"><span  role="img"   aria-label="boar" >🐗</span></div>
+					<div className="App-logo"><span  role="img"  aria-label="tomato" >🍅</span></div>
 				</div>
 				<div className="tasks"> 
 					<TaskList/>

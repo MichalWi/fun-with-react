@@ -22,8 +22,7 @@ class TaskList extends Component {
  
 		//todo: load from memory/API
 		if(window.localStorage){
-			var cache = JSON.parse(localStorage.getItem(TaskHistoryKey));
-		 
+			var cache = JSON.parse(localStorage.getItem(TaskHistoryKey)); 
 			if(cache){ 
 				this.setState(cache);
 			}

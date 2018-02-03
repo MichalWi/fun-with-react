@@ -1,0 +1,23 @@
+.pomodoro-group {
+    float: left;
+    margin: 4px;
+    width: 20%
+}
+
+.pomodoro-group .tomato {
+    float: right;
+    font-size: 0.8em;
+}
+
+.pomodoro-group .pending {
+    -webkit-filter: opacity(0.1);
+    filter: opacity(0.1);
+}
+
+.pomodoro-group button {
+    background: none;
+    border: none;
+    float: left;
+    -webkit-filter: opacity(0.4);
+    filter: opacity(0.4);
+}

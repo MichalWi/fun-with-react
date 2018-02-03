@@ -53,7 +53,8 @@ class Task extends Component {
 		return (
 			<div className="task"> 
 				<input autoFocus  ref="input"   value={this.state.Text} onChange={this.handleChange} onKeyDown={this.handleKeyDown} />
-				<PomodoroGroup />
+				{this.state.Text &&	<PomodoroGroup />}
+			
 			</div>
 		);
 	}

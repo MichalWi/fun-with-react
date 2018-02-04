@@ -1,5 +1,5 @@
 .task {
-    margin: 4px 0 10px 0;
+    margin: 4px;
     width: 100%;
     display: inline-block;
 }
@@ -28,13 +28,13 @@
         width: 170px;
         border-radius: 4px;
         float: left;
-        margin-bottom: 30px;
     }
     .task input {
         width: 100%;
         border-radius: 4px;
     }
     .task {
-        margin: 4px 0 20px 0;
+        margin: 4px 0 15px 0;
+        background-color: ghostwhite;
     }
 }

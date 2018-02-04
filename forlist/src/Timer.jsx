@@ -52,7 +52,9 @@ class PomodoroGroup extends Component {
 		return (
 			<div className="timer">
 				{this.renderTime()}
-				<button className="start" onClick={this.handleToggle}><span role="img" aria-label="start"  >⏱</span></button>
+				<button className="start" onClick={this.handleToggle}><span role="img" aria-label="start"  >
+					{this.state.running ? "🏃‍": "⏱"}
+				</span></button>
 			</div>
 		);
 	}

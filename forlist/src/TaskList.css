@@ -1,9 +1,10 @@
  .tasks {
+     padding-top: 40px;
      width: 80%;
      margin: 0 auto;
  }
  
- @media (max-width: 667px) {
+ @media (max-width: 700px) {
      .tasks {
          width: 95%;
      }

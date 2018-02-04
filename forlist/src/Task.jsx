@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import debounce from 'lodash.debounce';
 import PomodoroGroup from "./PomodoroGroup";
+import Timer from "./Timer";
 import "./Task.css";
 
 class Task extends Component {
@@ -52,8 +53,10 @@ class Task extends Component {
 		return (
 			<div className="task">
 				<input autoFocus ref="input" value={this.state.Text} onChange={this.handleChange} onKeyDown={this.handleKeyDown} />
-				{this.state.Text && <PomodoroGroup />}
-
+				<div className="controls">
+					{this.state.Text && <PomodoroGroup />}
+					{this.state.Text && <Timer />}
+				</div>
 			</div>
 		);
 	}

@@ -1,11 +1,10 @@
 .pomodoro-group {
-    float: left;
     margin: 4px;
-    width: 20%
+    width: 50px;
+    float: left;
 }
 
 .pomodoro-group .tomato {
-    float: right;
     font-size: 0.8em;
 }
 
@@ -17,7 +16,6 @@
 .pomodoro-group button {
     background: none;
     border: none;
-    float: left;
     -webkit-filter: opacity(0.4);
     filter: opacity(0.4);
 }

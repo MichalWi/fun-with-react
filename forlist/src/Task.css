@@ -1,17 +1,40 @@
 .task {
-    margin: 4px;
+    margin: 4px 0 10px 0;
+    width: 100%;
+    display: inline-block;
 }
 
 .task input {
     border: none;
     background: none;
     padding: 5px 8px;
-    width: 70%;
+    width: 63%;
     font-size: 1em;
     float: left;
+}
+
+.task .controls {
+    width: 33%;
+    float: right;
 }
 
 .task input:focus {
     box-shadow: 0px 7px 12px -9px rgb(14, 139, 255);
     outline: none;
+}
+
+@media (max-width: 700px) {
+    .task .controls {
+        width: 170px;
+        border-radius: 4px;
+        float: left;
+        margin-bottom: 30px;
+    }
+    .task input {
+        width: 100%;
+        border-radius: 4px;
+    }
+    .task {
+        margin: 4px 0 20px 0;
+    }
 }

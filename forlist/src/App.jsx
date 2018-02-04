@@ -7,10 +7,7 @@ class App extends Component {
 
 	render() {	
 		return (
-			<div className="App">
-				<div className="App-header">
-					<div className="App-logo"><span  role="img"  aria-label="tomato" >🍅</span></div>
-				</div>
+			<div className="App"> 
 				<div className="tasks"> 
 					<TaskList/>
 				</div>

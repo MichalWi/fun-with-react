@@ -23,20 +23,14 @@ class PomodoroGroup extends Component {
 	handleMinus() {
 		if (this.state.pomodoros.length) {
 			this.setState(prevState => ({
-				pomodoros: prevState.pomodoros.slice(0,-1)
+				pomodoros: prevState.pomodoros.slice(0, -1)
 			}));
 		}
 	}
-	
-	render() {
-		let items = this.state.pomodoros.map((item) => {
-			
-			if (item.state === "completed") {
-				return <span   key={item.id} role="img" aria-label="pomodoro" className="pending tomato">🍅</span>;
 
-			} else {
-				return <span   key={item.id} role="img" aria-label="pomodoro" className="completed tomato">🍅</span>;
-			}
+	render() {
+		let items = this.state.pomodoros.map((item) => { 
+			return <span key={item.id} role="img" aria-label="pomodoro" className="completed tomato">🍅</span>;
 		});
 
 		return (
@@ -44,7 +38,9 @@ class PomodoroGroup extends Component {
 				<div>
 					<button onClick={this.handlePlus}><span role="img" aria-label="plus" >➕</span></button>
 					<button onClick={this.handleMinus}><span role="img" aria-label="minus" >➖</span></button>
-					{items}
+					
+					{items}  
+				
 				</div>
 			</div>
 		);
